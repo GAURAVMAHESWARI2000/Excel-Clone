@@ -27,6 +27,10 @@ for(let i=0;i<rows;i++){
         let cell = document.createElement("div")
         cell.setAttribute("class","cell")
         cell.setAttribute("contenteditable","true")
+        cell.setAttribute("spellcheck","false")
+        //attribute for cell in grid and in storage linking
+        cell.setAttribute("rid",i)
+        cell.setAttribute("cid",j)
         rowCont.appendChild(cell);
         addListenerForAddressBarDisplay(cell,i,j);
     }
@@ -40,3 +44,7 @@ function addListenerForAddressBarDisplay(cell,i,j){
         addressBar.value = col+row
     })
 }
+
+//by default click on first cell using DOM
+let firstCell = document.querySelector(".cell")
+firstCell.click();
