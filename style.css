@@ -85,17 +85,29 @@ body{
 .sheet-add-icon{
     width: 2vw;
 }
+.sheet-add-icon:hover {
+    cursor: default;
+}
 .sheets-folder-cont{
     display: flex;
     align-items: center;
     height:80%;
     width: calc(100vw - 2vw );
+    overflow: auto;
 }
 .sheet-folder{
+    height: 80%;
     text-decoration: underline;
     font-weight: bold;
     text-decoration-thickness:3px;
     font-size:0.9rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sheet-content{
+    width: 5rem;
 }
 
 .grid-cont{

@@ -1,13 +1,15 @@
 // storage -> 2d array 
+let collectedGraphComponent=[]
+
 let graphComponentMatrix = []
-for (let i = 0; i < rows; i++) {
-    let row = []
-    for (let j = 0; j < cols; j++) {
-        //why array -> more than one children or dependency
-        row.push([])
-    }
-    graphComponentMatrix.push(row)
-}
+// for (let i = 0; i < rows; i++) {
+//     let row = []
+//     for (let j = 0; j < cols; j++) {
+//         //why array -> more than one children or dependency
+//         row.push([])
+//     }
+//     graphComponentMatrix.push(row)
+// }
 
 //returns true if graph is cyclic else returns false
 function isGraphCyclic(graphComponentMatrix) {
@@ -29,11 +31,11 @@ function isGraphCyclic(graphComponentMatrix) {
         for (let j = 0; j < cols; j++) {
             let isCycle = dfsCycleDetection(graphComponentMatrix, i, j, visited, dfsVisited)
             if (isCycle == true) {
-                return true
+                return [i,j]
             }
         }
     }
-    return false
+    return null
 }
 
 //dfs function to detect cycle
