@@ -12,21 +12,21 @@
 
 <body>
     <div class="page-actions-cont">
-        <div class="page-action">File</div>
         <div class="page-action">Home</div>
+        <div class="page-action selected-page-action">File</div>
         <div class="page-action">Insert</div>
         <div class="page-action">Layout</div>
         <div class="page-action"></div>
     </div>
 
     <div class="cellprop-actions-cont">
-        <span class="material-icons">
+        <span class="material-icons copy">
             content_copy
         </span>
-        <span class="material-icons">
+        <span class="material-icons cut">
             content_cut
         </span>
-        <span class="material-icons">
+        <span class="material-icons paste">
             content_paste
         </span>
         <select class="font-family-prop">
@@ -72,11 +72,17 @@
             </span>
             <input type="color" class="BGcolor-prop">
         </div>
+        <span class="material-icons download">
+            cloud_download
+        </span>
+        <span class="material-icons open">
+            cloud_upload
+        </span>
     </div>
 
     <div class="formula-actions-cont">
         <input type="text" readonly class="address-bar">
-        <img  class="formula-icon" src="https://img.icons8.com/ios-filled/50/000000/formula-fx.png"/>        
+        <img class="formula-icon" src="https://img.icons8.com/ios-filled/50/000000/formula-fx.png" />
         <input type="text" class="formula-bar">
     </div>
 
@@ -94,9 +100,7 @@
                 post_add
             </span>
         </div>
-        <div class="sheets-folder-cont">
-            
-        </div>
+        <div class="sheets-folder-cont"> </div>
     </div>
 
 
@@ -106,6 +110,8 @@
     <script src="./cell-properties.js"></script>
     <script src="./cyclicPathTrace.js"></script>
     <script src="./formula.js"></script>
+    <script src="./cutCopyPaste.js"></script>
+    <script src="./openSave.js"></script>
 </body>
 
 </html>
